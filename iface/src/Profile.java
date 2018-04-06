@@ -1,20 +1,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Profile {
 
-	private ArrayList<String> listOfAttribute;
-	private ArrayList<String> listOfAttributeFeature;
+	private ArrayList<String> listOfAttribute = new ArrayList<String>();
+	private ArrayList<String> listOfAttributeFeature = new ArrayList<String>();
 	
 	
 	public static boolean isThereAttribute(Profile profile, String attribute)
 	{
-		
-		int size = profile.listOfAttribute.size();
-
-		for (int i = 0; i < size; i++) {
-			if(profile.listOfAttribute.get(i).equals(attribute))
+		for (String string : profile.listOfAttribute) {
+			if(string.equals(attribute))
 				return true;
 		}
 		return false;
